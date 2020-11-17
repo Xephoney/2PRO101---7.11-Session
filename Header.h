@@ -12,7 +12,7 @@
 
 char _Lock[2][6]{ {'V',' ',' ',' ',' ',' '},{'A','*','*','*','*','*'} };
 
-std::string password{ "ABCDEF" };
+std::string password;
 bool UnlockingMechanism();
 void PrintLock();
 void PasswordCheck();

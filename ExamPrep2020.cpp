@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include "Header.h"
-
+#include <fstream>
 int main()
 {
     if (UnlockingMechanism())
@@ -14,6 +14,12 @@ bool UnlockingMechanism()
 {
     int horizontal = 0;
     std::string current_password;
+    std::fstream file("Password.txt");
+    std::getline(file, password);
+    if (password.length() == 0)
+    {
+        password = "ABCDEF";
+    }
     PrintLock();
     do 
     {
